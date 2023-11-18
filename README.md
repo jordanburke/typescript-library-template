@@ -1,6 +1,7 @@
 ## typescript-library-template
 
 [![Node.js CI](https://github.com/jordanburke/typescript-library-template/actions/workflows/node.js.yml/badge.svg)](https://github.com/jordanburke/typescript-library-template/actions/workflows/node.js.yml)
+[![CodeQL](https://github.com/jordanburke/typescript-library-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/jordanburke/typescript-library-template/actions/workflows/codeql.yml)
 
 A basic template for creating a TypeScript library.
 
