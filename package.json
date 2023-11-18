@@ -2,7 +2,12 @@
   "name": "-template",
   "version": "5.20.0",
   "description": "A basic template for creating a TypeScript library and Publishing it to NPM.",
-  "keywords": ["typescript", "template", "tsup", "npm"],
+  "keywords": [
+    "typescript",
+    "template",
+    "tsup",
+    "npm"
+  ],
   "author": "jordan.burke@gmail.com",
   "license": "MIT",
   "homepage": "https://github.com/jordanburke/typescript-library-template",

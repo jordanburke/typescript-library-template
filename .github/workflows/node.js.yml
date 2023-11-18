@@ -30,3 +30,9 @@ jobs:
 
     - name: Install dependencies
       run: pnpm install
+
+    - name: Run lint
+      run: pnpm run lint:format
+
+    - name: Run Tests
+      run: pnpm run test:cov
