@@ -1,7 +1,0 @@
-.gitignore
-.eslintignore
-node_modules
-.DS_Store
-dist-ssr
-*.local
-tsconfig.json
