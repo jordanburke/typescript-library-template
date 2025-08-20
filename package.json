@@ -16,20 +16,24 @@
     "url": "https://github.com/jordanburke/typescript-library-template"
   },
   "scripts": {
-    "ts-types": "tsc",
-    "build:dev": "rimraf lib && tsup --watch",
-    "build:prod": "rimraf dist && cross-env NODE_ENV=production tsup",
-    "build:watch": "tsup --watch",
-    "build:publish": "pnpm build:prod && pnpm publish --access public",
-    "lint:fix": "eslint ./src --quiet --fix",
-    "lint:format": "prettier  --loglevel warn --write \"./**/*.{ts,tsx,css,md,json}\" ",
-    "lint": "pnpm lint:format && pnpm lint:fix",
+    "ci": "pnpm format && pnpm lint && pnpm test && pnpm build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint ./src --fix",
+    "lint:check": "eslint ./src",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "build": "rimraf dist && cross-env NODE_ENV=production tsup",
+    "build:watch": "tsup --watch",
+    "dev": "tsup --watch",
+    "prepublishOnly": "pnpm ci",
+    "ts-types": "tsc"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.33.0",
     "@types/node": "^22.17.2",
     "@typescript-eslint/eslint-plugin": "^8.40.0",
     "@typescript-eslint/parser": "^8.40.0",
@@ -54,9 +58,9 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
   "files": [
