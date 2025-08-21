@@ -10,7 +10,7 @@ This is a TypeScript library template using modern tooling for building and publ
 
 ### Pre-Checkin Command
 
-- `pnpm ci` - **Main command**: Format, lint, test, and build everything for checkin
+- `pnpm validate` - **Main command**: Format, lint, test, and build everything for checkin
 
 ### Formatting
 
@@ -37,7 +37,7 @@ This is a TypeScript library template using modern tooling for building and publ
 
 ### Publishing
 
-- `prepublishOnly` - Automatically runs `pnpm ci` before publishing
+- `prepublishOnly` - Automatically runs `pnpm validate` before publishing
 
 ### Type Checking
 

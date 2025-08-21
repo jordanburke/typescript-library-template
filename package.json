@@ -16,7 +16,7 @@
     "url": "https://github.com/jordanburke/typescript-library-template"
   },
   "scripts": {
-    "ci": "pnpm format && pnpm lint && pnpm test && pnpm build",
+    "validate": "pnpm format && pnpm lint && pnpm test && pnpm build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint ./src --fix",
@@ -28,7 +28,7 @@
     "build": "rimraf dist && cross-env NODE_ENV=production tsup",
     "build:watch": "tsup --watch",
     "dev": "tsup --watch",
-    "prepublishOnly": "pnpm ci",
+    "prepublishOnly": "pnpm validate",
     "ts-types": "tsc"
   },
   "devDependencies": {

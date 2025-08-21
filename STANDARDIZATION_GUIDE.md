@@ -4,7 +4,7 @@ This guide helps you standardize npm/pnpm scripts across TypeScript projects usi
 
 ## Quick Copy-Paste Prompt for Claude Code
 
-```
+````
 Please standardize this TypeScript project's npm scripts to match our established pattern. Here's what needs to be done:
 
 1. **Update package.json scripts section** with these standardized commands:
@@ -25,7 +25,7 @@ Please standardize this TypeScript project's npm scripts to match our establishe
      "prepublishOnly": "pnpm ci",
      "ts-types": "tsc --noEmit"
    }
-   ```
+````
 
 2. **Update GitHub Actions workflows** to use `pnpm run ci` instead of individual commands
 
@@ -37,6 +37,7 @@ Please standardize this TypeScript project's npm scripts to match our establishe
 4. **Find and replace** any references to old commands in documentation files
 
 Key principles:
+
 - `ci` command does format → lint:check → test → build (full validation)
 - `format` writes changes, `format:check` only validates
 - `lint` fixes issues, `lint:check` only reports
@@ -44,7 +45,8 @@ Key principles:
 - `prepublishOnly` uses `ci` for safety
 
 After changes, test with `pnpm run ci` to ensure everything works.
-```
+
+````
 
 ## Detailed Implementation Steps
 
@@ -57,7 +59,7 @@ The standardized pattern follows this hierarchy:
 
 **Core Operations:**
 - `format` / `format:check` - Prettier formatting (write vs validate)
-- `lint` / `lint:check` - ESLint linting (fix vs validate)  
+- `lint` / `lint:check` - ESLint linting (fix vs validate)
 - `test` / `test:*` - Vitest testing with variants
 - `build` / `dev` - Production build vs development watch
 
@@ -71,12 +73,13 @@ Update workflow files to use the standardized commands:
 **Before:**
 ```yaml
 - run: pnpm install
-- run: pnpm run lint:format  
+- run: pnpm run lint:format
 - run: pnpm run test
 - run: pnpm run build:prod
-```
+````
 
 **After:**
+
 ```yaml
 - run: pnpm install
 - run: pnpm run ci
@@ -86,21 +89,24 @@ Update workflow files to use the standardized commands:
 
 Update your project documentation to reflect the new commands:
 
-```markdown
+````markdown
 ## Development Commands
 
 ### Pre-Checkin Command
+
 ```bash
 pnpm run ci        # 🚀 Main command: format, lint, test, and build everything
 ```
+````
 
 ### Individual Commands
+
 ```bash
 # Formatting
 pnpm format        # Format code with Prettier
 pnpm format:check  # Check formatting without writing
 
-# Linting  
+# Linting
 pnpm lint          # Fix ESLint issues
 pnpm lint:check    # Check ESLint issues without fixing
 
@@ -127,7 +133,7 @@ pnpm dev           # Development mode with watch
 - [ ] Update `package.json` scripts section
 - [ ] Test `pnpm run ci` command works
 - [ ] Update GitHub Actions workflows
-- [ ] Update CLAUDE.md or README.md documentation  
+- [ ] Update CLAUDE.md or README.md documentation
 - [ ] Search and replace old command references
 - [ ] Verify `prepublishOnly` uses `ci` command
 - [ ] Test individual commands work as expected
@@ -144,6 +150,7 @@ pnpm dev           # Development mode with watch
 ## Example Migration
 
 **Before (inconsistent):**
+
 ```json
 {
   "scripts": {
@@ -157,13 +164,14 @@ pnpm dev           # Development mode with watch
 ```
 
 **After (standardized):**
+
 ```json
 {
   "scripts": {
     "ci": "pnpm format && pnpm lint:check && pnpm test && pnpm build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint ./src --fix", 
+    "lint": "eslint ./src --fix",
     "lint:check": "eslint ./src",
     "test": "jest",
     "build": "rimraf dist && tsc && webpack",

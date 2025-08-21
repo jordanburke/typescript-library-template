@@ -19,22 +19,24 @@ A modern TypeScript library template with standardized build scripts and tooling
 2. **Clone your new repository**
 3. **Install dependencies**: `pnpm install`
 4. **Start developing**: `pnpm dev` (builds with watch mode)
-5. **Before committing**: `pnpm run ci` (format + lint + test + build)
+5. **Before committing**: `pnpm run validate` (format + lint + test + build)
 
 ## Development Commands
 
 ### Pre-Checkin Command
+
 ```bash
-pnpm run ci        # 🚀 Main command: format, lint, test, and build everything
+pnpm run validate  # 🚀 Main command: format, lint, test, and build everything
 ```
 
 ### Individual Commands
+
 ```bash
 # Formatting
 pnpm format        # Format code with Prettier
 pnpm format:check  # Check formatting without writing
 
-# Linting  
+# Linting
 pnpm lint          # Fix ESLint issues
 pnpm lint:check    # Check ESLint issues without fixing
 
@@ -55,7 +57,7 @@ pnpm ts-types      # Check TypeScript types
 
 ## Publishing
 
-The template automatically runs `pnpm run ci` before publishing via the `prepublishOnly` script, ensuring your package is properly formatted, linted, tested, and built.
+The template automatically runs `pnpm run validate` before publishing via the `prepublishOnly` script, ensuring your package is properly formatted, linted, tested, and built.
 
 ```bash
 pnpm publish --access public
@@ -74,11 +76,11 @@ dist/                 # Built output (CommonJS + ES modules + types)
 ## Tooling
 
 - **Build**: [tsup](https://tsup.egoist.dev/) - Fast TypeScript bundler
-- **Test**: [Vitest](https://vitest.dev/) - Fast unit test framework  
+- **Test**: [Vitest](https://vitest.dev/) - Fast unit test framework
 - **Lint**: [ESLint](https://eslint.org/) with TypeScript support
 - **Format**: [Prettier](https://prettier.io/) with ESLint integration
 - **Package Manager**: [pnpm](https://pnpm.io/) for fast, efficient installs
 
 ---
 
-*This template is based on the earlier work of https://github.com/orabazu/tsup-library-template but updated with modern tooling and standardized scripts.*
+_This template is based on the earlier work of https://github.com/orabazu/tsup-library-template but updated with modern tooling and standardized scripts._
