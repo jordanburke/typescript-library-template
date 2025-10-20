@@ -1,0 +1,14 @@
+{
+  "name": "typescript-standards",
+  "version": "1.0.0",
+  "description": "TypeScript project standards and templates for modern library development",
+  "author": "jordan.burke@gmail.com",
+  "skills": [
+    {
+      "id": "typescript-standards",
+      "name": "TypeScript Project Standards",
+      "description": "Guide for creating TypeScript libraries using the typescript-library-template pattern and applying its standards to existing projects. Use when setting up new npm packages, standardizing build scripts, configuring tooling (tsup, Vitest, ESLint, Prettier), or applying dual module format patterns.",
+      "path": ".claude/skills/typescript-standards"
+    }
+  ]
+}

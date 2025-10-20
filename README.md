@@ -81,6 +81,35 @@ dist/                 # Built output (CommonJS + ES modules + types)
 - **Format**: [Prettier](https://prettier.io/) with ESLint integration
 - **Package Manager**: [pnpm](https://pnpm.io/) for fast, efficient installs
 
+## Claude Code Skill
+
+This repository includes a Claude Code skill to help you apply these standards to other projects:
+
+**Location**: `.claude/skills/typescript-standards/`
+
+**Usage**: When using Claude Code, the skill automatically provides guidance for:
+
+- Creating new libraries from this template
+- Applying these standards to existing TypeScript projects
+- Configuring tooling (tsup, Vitest, ESLint, Prettier)
+- Setting up dual module format
+
+**Installation** (for use in other projects):
+
+```bash
+# Copy the skill to your Claude Code skills directory
+cp -r .claude/skills/typescript-standards ~/.claude/skills/
+
+# Or if using plugins/marketplace
+# See .claude-plugin/marketplace.json for distribution configuration
+```
+
+**References**:
+
+- [CLAUDE.md](./CLAUDE.md) - Development guidance for this project
+- [STANDARDIZATION_GUIDE.md](./STANDARDIZATION_GUIDE.md) - Guide for applying these patterns to existing projects
+- [.claude/skills/typescript-standards/](./. claude/skills/typescript-standards/) - Complete skill documentation
+
 ---
 
 _This template is based on the earlier work of https://github.com/orabazu/tsup-library-template but updated with modern tooling and standardized scripts._
