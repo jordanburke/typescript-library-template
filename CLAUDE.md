@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a TypeScript library template using modern tooling for building and publishing npm packages. It uses tsup for bundling, Vitest for testing, and supports both CommonJS and ES modules.
+This is a TypeScript library template designed to be cloned/forked for creating new npm packages. It provides standardized build scripts, modern tooling, and dual module format support (CommonJS + ES modules).
+
+**Template Usage**: See STANDARDIZATION_GUIDE.md for instructions on applying this pattern to other TypeScript projects.
 
 ## Development Commands
 
@@ -48,9 +50,14 @@ This is a TypeScript library template using modern tooling for building and publ
 ### Build System
 
 - **tsup**: Primary build tool configured in `tsup.config.ts`
-- **Dual Output**: Development builds go to `lib/`, production builds to `dist/`
-- **Format Support**: Generates both CommonJS (`cjs`) and ES modules (`esm`)
-- **TypeScript**: Generates declaration files automatically
+- **Dual Output Directories**:
+  - `lib/` - Development builds (NODE_ENV !== "production", used during `pnpm dev`)
+  - `dist/` - Production builds (NODE_ENV === "production", used for publishing)
+- **Format Support**: Generates both CommonJS (`.js`) and ES modules (`.mjs`)
+- **TypeScript**: Auto-generates `.d.ts` declaration files for both formats
+- **Environment-Based Behavior**:
+  - Production: minified, bundled, no watch
+  - Development: source maps, watch mode, faster builds
 
 ### Testing Framework
 
@@ -66,14 +73,26 @@ This is a TypeScript library template using modern tooling for building and publ
 
 ### Package Configuration
 
-- **Entry Points**: Main source in `src/index.ts`
+- **Entry Points**: Main source in `src/index.ts`, builds all files in `src/**/*.ts`
 - **Exports**: Supports both `require()` and `import` with proper type definitions
-- **Publishing**: Configured for npm with public access
+- **Publishing**:
+  - Configured for npm with public access
+  - Both `lib/` and `dist/` directories are published (see package.json "files" field)
+  - `prepublishOnly` hook ensures full validation before publish
+
+### TypeScript Configuration
+
+- **Strict Mode**: Enabled with some pragmatic exceptions:
+  - `noImplicitAny: false` - Allows implicit any for flexibility
+  - `strictPropertyInitialization: false` - Relaxed for constructor properties
+- **Target**: ESNext for modern JavaScript features
+- **Output**: TypeScript only emits declaration files; tsup handles transpilation
 
 ## Key Files
 
 - `src/index.ts` - Main library entry point
 - `test/*.spec.ts` - Test files using Vitest
-- `tsup.config.ts` - Build configuration with environment-based settings
+- `tsup.config.ts` - Build configuration with environment-based settings (line 3 checks NODE_ENV)
 - `vitest.config.ts` - Test configuration with coverage settings
 - `eslint.config.mjs` - Linting rules and TypeScript integration
+- `STANDARDIZATION_GUIDE.md` - Instructions for applying this pattern to other projects
