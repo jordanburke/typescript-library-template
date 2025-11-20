@@ -36,7 +36,7 @@
     "cross-env": "^10.1.0",
     "rimraf": "^6.1.2",
     "tsup": "^8.5.1",
-    "typescript-template-configs": "^2.0.1"
+    "typescript-template-configs": "^3.0.0"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
