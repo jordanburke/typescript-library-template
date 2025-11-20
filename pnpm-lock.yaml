@@ -14,8 +14,8 @@ importers:
         specifier: ^8.5.1
         version: 8.5.1(postcss@8.5.6)(typescript@5.9.3)
       typescript-template-configs:
-        specifier: ^3.0.0
-        version: 3.0.0(cross-env@10.1.0)(eslint@9.39.1)(prettier@3.6.2)(rimraf@6.1.2)(tsup@8.5.1(postcss@8.5.6)(typescript@5.9.3))(typescript@5.9.3)(vitest@4.0.10)
+        specifier: ^3.2.1
+        version: 3.2.1(tsup@8.5.1(postcss@8.5.6)(typescript@5.9.3))
 
 packages:
   "@babel/helper-string-parser@7.27.1":
@@ -2365,17 +2365,12 @@ packages:
       { integrity: sha512-3KS2b+kL7fsuk/eJZ7EQdnEmQoaho/r6KUef7hxvltNA5DR8NAUM+8wJMbJyZ4G9/7i3v5zPBIMN5aybAh2/Jg== }
     engines: { node: ">= 0.4" }
 
-  typescript-template-configs@3.0.0:
+  typescript-template-configs@3.2.1:
     resolution:
-      { integrity: sha512-/9r9nD2ssZW5LjfRwGqrahQp6IvRvnHue9ERi5wARhxWHrHW1qbNXeI7j9JHJpE5PeCXXZSn5ckt0gCThz7c4Q== }
+      { integrity: sha512-PPeB7t/K7+rC9ghmcyfypgTNCrOqQRgHVhhZh/oLhwWMlCgax2sL35f6SAWYjIeDGBG7RO73lloHcCF5IHGv3w== }
+    hasBin: true
     peerDependencies:
-      cross-env: ^10.x
-      eslint: ^9.x
-      prettier: ^3.x
-      rimraf: ^6.x
       tsup: ^8.x
-      typescript: ^5.x
-      vitest: ^4.x
     peerDependenciesMeta:
       tsup:
         optional: true
@@ -4508,7 +4503,7 @@ snapshots:
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
 
-  typescript-template-configs@3.0.0(cross-env@10.1.0)(eslint@9.39.1)(prettier@3.6.2)(rimraf@6.1.2)(tsup@8.5.1(postcss@8.5.6)(typescript@5.9.3))(typescript@5.9.3)(vitest@4.0.10):
+  typescript-template-configs@3.2.1(tsup@8.5.1(postcss@8.5.6)(typescript@5.9.3)):
     dependencies:
       "@eslint/eslintrc": 3.3.1
       "@eslint/js": 9.39.1
@@ -4532,13 +4527,31 @@ snapshots:
     optionalDependencies:
       tsup: 8.5.1(postcss@8.5.6)(typescript@5.9.3)
     transitivePeerDependencies:
+      - "@edge-runtime/vm"
       - "@swc/core"
       - "@swc/wasm"
+      - "@types/debug"
       - "@types/eslint"
       - "@vitest/browser"
+      - "@vitest/browser-playwright"
+      - "@vitest/browser-preview"
+      - "@vitest/browser-webdriverio"
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
+      - happy-dom
+      - jiti
+      - jsdom
+      - less
+      - lightningcss
+      - msw
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
       - supports-color
+      - terser
+      - tsx
+      - yaml
 
   typescript@5.9.3: {}
 
