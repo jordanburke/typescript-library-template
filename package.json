@@ -34,7 +34,7 @@
   "devDependencies": {
     "@types/node": "^22.19.1",
     "tsup": "^8.5.1",
-    "typescript-template-configs": "^3.2.1"
+    "typescript-template-configs": "^4.0.0"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
