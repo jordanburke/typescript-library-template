@@ -5,7 +5,7 @@
   "keywords": [
     "typescript",
     "template",
-    "tsup",
+    "tsdown",
     "npm"
   ],
   "author": "jordan.burke@gmail.com",
@@ -25,25 +25,24 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
-    "build": "rimraf dist && cross-env NODE_ENV=production tsup",
-    "build:watch": "tsup --watch",
-    "dev": "tsup --watch",
+    "build": "rimraf dist && cross-env NODE_ENV=production tsdown",
+    "build:watch": "tsdown --watch",
+    "dev": "tsdown --watch",
     "prepublishOnly": "pnpm validate",
     "ts-types": "tsc"
   },
   "devDependencies": {
     "@types/node": "^22.19.1",
-    "tsup": "^8.5.1",
-    "typescript-template-configs": "^3.2.1"
+    "tsdown": "^0.16.6",
+    "typescript-template-configs": "^4.0.0"
   },
+  "type": "module",
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.js"
     }
   },
   "files": [
@@ -51,5 +50,5 @@
     "dist"
   ],
   "prettier": "typescript-template-configs",
-  "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c"
+  "packageManager": "pnpm@10.23.0+sha512.21c4e5698002ade97e4efe8b8b4a89a8de3c85a37919f957e7a0f30f38fbc5bbdd05980ffe29179b2fb6e6e691242e098d945d1601772cad0fef5fb6411e2a4b"
 }
