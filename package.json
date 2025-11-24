@@ -32,7 +32,7 @@
     "ts-types": "tsc"
   },
   "devDependencies": {
-    "@types/node": "^22.19.1",
+    "@types/node": "^24.10.1",
     "tsdown": "^0.16.6",
     "typescript-template-configs": "^4.0.0"
   },
