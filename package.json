@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.19.1",
-    "tsdown": "^0.16.6",
+    "tsdown": "^0.16.8",
     "typescript-template-configs": "^4.0.0"
   },
   "type": "module",
