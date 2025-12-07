@@ -1,6 +1,6 @@
 {
   "name": "-template",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "A basic template for creating a TypeScript library and Publishing it to NPM.",
   "keywords": [
     "typescript",
@@ -16,20 +16,18 @@
     "url": "https://github.com/jordanburke/typescript-library-template"
   },
   "scripts": {
-    "validate": "pnpm format && pnpm lint && pnpm test && pnpm build",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "lint": "eslint ./src --fix",
-    "lint:check": "eslint ./src",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "test:ui": "vitest --ui",
-    "build": "rimraf dist && cross-env NODE_ENV=production tsdown",
-    "build:watch": "tsdown --watch",
-    "dev": "tsdown --watch",
-    "prepublishOnly": "pnpm validate",
-    "ts-types": "tsc"
+    "validate": "ts-builds validate",
+    "format": "ts-builds format",
+    "format:check": "ts-builds format:check",
+    "lint": "ts-builds lint",
+    "lint:check": "ts-builds lint:check",
+    "typecheck": "ts-builds typecheck",
+    "test": "ts-builds test",
+    "test:watch": "ts-builds test:watch",
+    "test:coverage": "ts-builds test:coverage",
+    "build": "ts-builds build",
+    "dev": "ts-builds dev",
+    "prepublishOnly": "pnpm validate"
   },
   "devDependencies": {
     "@types/node": "^22.19.1",
@@ -37,18 +35,20 @@
     "tsdown": "^0.17.0"
   },
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
   "files": [
     "lib",
     "dist"
   ],
-  "prettier": "typescript-template-configs",
+  "prettier": "ts-builds/prettier",
   "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a"
 }
