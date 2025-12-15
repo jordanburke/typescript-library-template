@@ -32,7 +32,7 @@
   "devDependencies": {
     "@types/node": "^22.19.1",
     "ts-builds": "^1.2.1",
-    "tsdown": "^0.17.1"
+    "tsdown": "^0.17.4"
   },
   "type": "module",
   "main": "./dist/index.cjs",
