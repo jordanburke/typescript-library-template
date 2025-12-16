@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@types/node':
-        specifier: ^24.10.4
-        version: 24.10.4
+        specifier: ^25.0.2
+        version: 25.0.2
       ts-builds:
         specifier: ^1.2.3
         version: 1.2.3(tsdown@0.18.0(synckit@0.11.11)(typescript@5.9.3))
@@ -539,6 +539,9 @@ packages:
 
   '@types/node@24.10.4':
     resolution: {integrity: sha512-vnDVpYPMzs4wunl27jHrfmwojOGKya0xyM3sH+UE5iv5uPS6vX7UIoh6m+vQc5LGBq52HBKPIn/zcSZVzeDEZg==}
+
+  '@types/node@25.0.2':
+    resolution: {integrity: sha512-gWEkeiyYE4vqjON/+Obqcoeffmk0NF15WSBwSs7zwVA2bAbTaE0SJ7P0WNGoJn8uE7fiaV5a7dKYIJriEqOrmA==}
 
   '@typescript-eslint/eslint-plugin@8.50.0':
     resolution: {integrity: sha512-O7QnmOXYKVtPrfYzMolrCTfkezCJS9+ljLdKW/+DCvRsc3UAz+sbH6Xcsv7p30+0OwUbeWfUDAQE0vpabZ3QLg==}
@@ -2243,6 +2246,10 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
+  '@types/node@25.0.2':
+    dependencies:
+      undici-types: 7.16.0
+
   '@typescript-eslint/eslint-plugin@8.50.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.2
@@ -2334,7 +2341,7 @@ snapshots:
       '@typescript-eslint/types': 8.50.0
       eslint-visitor-keys: 4.2.1
 
-  '@vitest/coverage-v8@4.0.15(vitest@4.0.15)':
+  '@vitest/coverage-v8@4.0.15(vitest@4.0.15(@types/node@24.10.4)(@vitest/ui@4.0.15))':
     dependencies:
       '@bcoe/v8-coverage': 1.0.2
       '@vitest/utils': 4.0.15
@@ -2347,7 +2354,7 @@ snapshots:
       obug: 2.1.1
       std-env: 3.10.0
       tinyrainbow: 3.0.3
-      vitest: 4.0.15(@types/node@24.10.4)(@vitest/ui@4.0.15)
+      vitest: 4.0.15(@types/node@25.0.2)(@vitest/ui@4.0.15)
     transitivePeerDependencies:
       - supports-color
 
@@ -2360,7 +2367,7 @@ snapshots:
       chai: 6.2.1
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.15(vite@7.3.0(@types/node@24.10.4))':
+  '@vitest/mocker@4.0.15(vite@7.3.0(@types/node@25.0.2))':
     dependencies:
       '@vitest/spy': 4.0.15
       estree-walker: 3.0.3
@@ -2394,7 +2401,7 @@ snapshots:
       sirv: 3.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vitest: 4.0.15(@types/node@24.10.4)(@vitest/ui@4.0.15)
+      vitest: 4.0.15(@types/node@25.0.2)(@vitest/ui@4.0.15)
 
   '@vitest/utils@4.0.15':
     dependencies:
@@ -3583,7 +3590,7 @@ snapshots:
       '@types/node': 24.10.4
       '@typescript-eslint/eslint-plugin': 8.50.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
       '@typescript-eslint/parser': 8.50.0(eslint@9.39.2)(typescript@5.9.3)
-      '@vitest/coverage-v8': 4.0.15(vitest@4.0.15)
+      '@vitest/coverage-v8': 4.0.15(vitest@4.0.15(@types/node@24.10.4)(@vitest/ui@4.0.15))
       '@vitest/ui': 4.0.15(vitest@4.0.15)
       cross-env: 10.1.0
       eslint: 9.39.2
@@ -3596,7 +3603,7 @@ snapshots:
       rimraf: 6.1.2
       ts-node: 10.9.2(@types/node@24.10.4)(typescript@5.9.3)
       typescript: 5.9.3
-      vitest: 4.0.15(@types/node@24.10.4)(@vitest/ui@4.0.15)
+      vitest: 4.0.15(@types/node@25.0.2)(@vitest/ui@4.0.15)
     optionalDependencies:
       tsdown: 0.18.0(synckit@0.11.11)(typescript@5.9.3)
     transitivePeerDependencies:
@@ -3757,10 +3764,10 @@ snapshots:
       '@types/node': 24.10.4
       fsevents: 2.3.3
 
-  vitest@4.0.15(@types/node@24.10.4)(@vitest/ui@4.0.15):
+  vitest@4.0.15(@types/node@25.0.2)(@vitest/ui@4.0.15):
     dependencies:
       '@vitest/expect': 4.0.15
-      '@vitest/mocker': 4.0.15(vite@7.3.0(@types/node@24.10.4))
+      '@vitest/mocker': 4.0.15(vite@7.3.0(@types/node@25.0.2))
       '@vitest/pretty-format': 4.0.15
       '@vitest/runner': 4.0.15
       '@vitest/snapshot': 4.0.15
@@ -3780,7 +3787,7 @@ snapshots:
       vite: 7.3.0(@types/node@24.10.4)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 24.10.4
+      '@types/node': 25.0.2
       '@vitest/ui': 4.0.15(vitest@4.0.15)
     transitivePeerDependencies:
       - jiti
