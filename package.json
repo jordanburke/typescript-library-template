@@ -30,9 +30,9 @@
     "prepublishOnly": "pnpm validate"
   },
   "devDependencies": {
-    "@types/node": "^22.19.1",
-    "ts-builds": "^1.2.1",
-    "tsdown": "^0.17.1"
+    "@types/node": "^22.19.3",
+    "ts-builds": "^1.2.3",
+    "tsdown": "^0.18.0"
   },
   "type": "module",
   "main": "./dist/index.cjs",
@@ -50,5 +50,5 @@
     "dist"
   ],
   "prettier": "ts-builds/prettier",
-  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a"
+  "packageManager": "pnpm@10.26.0+sha512.3b3f6c725ebe712506c0ab1ad4133cf86b1f4b687effce62a9b38b4d72e3954242e643190fc51fa1642949c735f403debd44f5cb0edd657abe63a8b6a7e1e402"
 }
