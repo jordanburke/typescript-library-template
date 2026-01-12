@@ -30,7 +30,7 @@
     "prepublishOnly": "pnpm validate"
   },
   "devDependencies": {
-    "@types/node": "^24.10.4",
+    "@types/node": "^25.0.6",
     "ts-builds": "^2.0.0",
     "tsdown": "^0.18.4"
   },
