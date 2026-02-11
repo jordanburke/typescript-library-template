@@ -30,9 +30,9 @@
     "prepublishOnly": "pnpm validate"
   },
   "devDependencies": {
-    "@types/node": "^24.10.10",
-    "ts-builds": "^2.3.2",
-    "tsdown": "^0.18.4"
+    "@types/node": "^24.10.13",
+    "ts-builds": "^2.3.3",
+    "tsdown": "^0.20.3"
   },
   "type": "module",
   "main": "./dist/index.js",
