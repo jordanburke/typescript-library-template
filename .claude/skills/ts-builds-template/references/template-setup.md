@@ -2,6 +2,8 @@
 
 Complete guide for creating a new TypeScript library using the ts-builds-template.
 
+> For detailed tooling configuration (tsdown, Vitest, ESLint, Prettier, TypeScript), see the **ts-builds** skill.
+
 ## Prerequisites
 
 Before starting, ensure you have:

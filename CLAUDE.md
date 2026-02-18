@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a TypeScript library template designed to be cloned/forked for creating new npm packages. It uses the `ts-builds` toolchain for standardized build scripts and dual module format support (CommonJS + ES modules).
+This is a TypeScript library template designed to be cloned/forked for creating new npm packages. It uses the `ts-builds` toolchain for standardized build scripts with ESM output.
 
 **Template Usage**: See STANDARDIZATION_GUIDE.md for applying this pattern to other TypeScript projects.
 
@@ -51,23 +51,22 @@ pnpm test -- test/specific.spec.ts          # Run specific file
 ### Output Format
 
 - **dist/**: Production builds containing:
-  - `index.cjs` - CommonJS format
-  - `index.mjs` - ES modules format
-  - `index.d.mts` - TypeScript declarations
+  - `index.js` - ES module format
+  - `index.d.ts` - TypeScript declarations
 - **lib/**: Development builds (also published)
 
 ### Package Exports
 
 ```json
 {
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.mts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   }
 }
@@ -85,7 +84,7 @@ pnpm test -- test/specific.spec.ts          # Run specific file
 - `test/*.spec.ts` - Test files
 - `tsdown.config.ts` - Build config (imports from ts-builds)
 - `tsconfig.json` - TypeScript config (extends ts-builds)
-- `.claude/skills/typescript-standards/` - Claude Code skill for applying these standards
+- `.claude/skills/ts-builds-template/` - Claude Code skill for bootstrapping libraries from this template
 
 ## Publishing
 

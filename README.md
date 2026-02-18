@@ -1,6 +1,7 @@
 ## ts-builds-template
 
 [![Node.js CI](https://github.com/jordanburke/ts-builds-template/actions/workflows/node.js.yml/badge.svg)](https://github.com/jordanburke/ts-builds-template/actions/workflows/node.js.yml)
+[![npm version](https://img.shields.io/npm/v/ts-builds-template.svg)](https://www.npmjs.com/package/ts-builds-template)
 
 A modern TypeScript library template with standardized build scripts and tooling.
 
@@ -9,7 +10,7 @@ A modern TypeScript library template with standardized build scripts and tooling
 - **Modern Build System**: [ts-builds](https://github.com/jordanburke/ts-builds) + [tsdown](https://tsdown.dev/) for fast bundling
 - **Testing**: [Vitest](https://vitest.dev/) with coverage reporting
 - **Code Quality**: ESLint + Prettier with automatic formatting and fixing
-- **Dual Format**: Outputs both CommonJS and ES modules with proper TypeScript declarations
+- **ESM Output**: ES module output with proper TypeScript declarations
 - **Standardized Scripts**: Consistent commands via ts-builds across all projects
 
 ## Quick Start
@@ -68,7 +69,7 @@ src/
 ├── index.ts          # Main library entry point
 test/
 ├── *.spec.ts         # Test files
-dist/                 # Built output (CommonJS + ES modules + types)
+dist/                 # Built output (ES module + types)
 ```
 
 ## Tooling
@@ -82,29 +83,29 @@ dist/                 # Built output (CommonJS + ES modules + types)
 
 ## Claude Code Skill
 
-This repository includes a Claude Code skill to help you apply these standards to other projects:
+This repository includes a Claude Code skill for bootstrapping new TypeScript libraries from this template:
 
-**Location**: `.claude/skills/typescript-standards/`
+**Location**: `.claude/skills/ts-builds-template/`
 
-**Usage**: When using Claude Code, the skill automatically provides guidance for:
+**Usage**: When using Claude Code, the skill provides guidance for:
 
-- Creating new libraries from this template
-- Applying these standards to existing TypeScript projects
-- Configuring tooling (ts-builds, Vitest, ESLint, Prettier)
-- Setting up dual module format
+- Cloning and customizing this template for a new library
+- Understanding the project structure and dev workflow
+- Publishing to npm
 
 **Installation** (for use in other projects):
 
 ```bash
 # Copy the skill to your Claude Code skills directory
-cp -r .claude/skills/typescript-standards ~/.claude/skills/
+cp -r .claude/skills/ts-builds-template ~/.claude/skills/
 ```
+
+**Related Skills**: For tooling configuration, migration guides, and standardizing existing projects, see the [ts-builds](https://github.com/jordanburke/ts-builds) skill.
 
 **References**:
 
 - [CLAUDE.md](./CLAUDE.md) - Development guidance for this project
-- [STANDARDIZATION_GUIDE.md](./STANDARDIZATION_GUIDE.md) - Guide for applying these patterns to existing projects
-- [.claude/skills/typescript-standards/](./.claude/skills/typescript-standards/) - Complete skill documentation
+- [.claude/skills/ts-builds-template/](./.claude/skills/ts-builds-template/) - Complete skill documentation
 
 ---
 
