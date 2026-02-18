@@ -43,7 +43,7 @@ pnpm test -- test/specific.spec.ts          # Run specific file
 ### Build System: ts-builds + tsdown
 
 - **ts-builds**: Centralized toolchain package providing all build scripts
-- **tsdown**: Underlying bundler (successor to tsup) configured via `ts-builds/tsdown`
+- **tsdown**: Underlying bundler configured via `ts-builds/tsdown`
 - **Configuration**: `tsdown.config.ts` imports default config from ts-builds
 - **TypeScript**: `tsconfig.json` extends `ts-builds/tsconfig`
 - **Prettier**: Uses `ts-builds/prettier` shared config

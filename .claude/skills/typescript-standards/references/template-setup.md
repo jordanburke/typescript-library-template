@@ -1,6 +1,6 @@
 # Template Setup Guide
 
-Complete guide for creating a new TypeScript library using the typescript-library-template.
+Complete guide for creating a new TypeScript library using the ts-builds-template.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ git --version
 
 ```bash
 # Clone the repository
-git clone https://github.com/jordanburke/typescript-library-template.git my-library-name
+git clone https://github.com/jordanburke/ts-builds-template.git my-library-name
 
 # Navigate to the directory
 cd my-library-name
@@ -172,7 +172,7 @@ If not using MIT license:
 pnpm dev
 ```
 
-This runs tsup in watch mode, rebuilding on every file change.
+This runs tsdown in watch mode, rebuilding on every file change.
 
 **File structure:**
 
@@ -256,7 +256,7 @@ This runs:
 git add .
 
 # Create initial commit
-git commit -m "Initial commit from typescript-library-template"
+git commit -m "Initial commit from ts-builds-template"
 
 # Create main branch (if needed)
 git branch -M main
@@ -456,7 +456,7 @@ Edit `tsconfig.json` for your needs. The template uses strict mode with pragmati
 
 ### Customizing Build
 
-Edit `tsup.config.ts` to:
+Edit `tsdown.config.ts` to:
 
 - Add/remove formats (CJS, ESM, IIFE)
 - Configure minification
@@ -486,7 +486,7 @@ Support imports like `your-library/feature`:
 }
 ```
 
-**tsup.config.ts:**
+**tsdown.config.ts:**
 
 ```typescript
 export default defineConfig({
@@ -546,8 +546,8 @@ Common issues:
 
 ## Resources
 
-- **Template Repository**: https://github.com/jordanburke/typescript-library-template
+- **Template Repository**: https://github.com/jordanburke/ts-builds-template
 - **npm Documentation**: https://docs.npmjs.com/
-- **tsup Documentation**: https://tsup.egoist.dev/
+- **tsdown Documentation**: https://tsdown.dev/
 - **Vitest Documentation**: https://vitest.dev/
 - **Semantic Versioning**: https://semver.org/

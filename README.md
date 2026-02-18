@@ -1,6 +1,6 @@
-## typescript-library-template
+## ts-builds-template
 
-[![Node.js CI](https://github.com/jordanburke/typescript-library-template/actions/workflows/node.js.yml/badge.svg)](https://github.com/jordanburke/typescript-library-template/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/jordanburke/ts-builds-template/actions/workflows/node.js.yml/badge.svg)](https://github.com/jordanburke/ts-builds-template/actions/workflows/node.js.yml)
 
 A modern TypeScript library template with standardized build scripts and tooling.
 
